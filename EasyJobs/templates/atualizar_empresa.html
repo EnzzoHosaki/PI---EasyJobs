@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Editar Cadastrar Empresa | EasyJbos</title>
+</head>
+<body>
+    <header style="background-image: url('img/background-contacto.jpg')">
+        <div class="container">
+            <nav>
+                <a href="index.html"> <img src="img/easy.png" alt="logo"></a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre nós</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="contato.html">Contato</a>
+                    <a  class="btn"  href="login.html">Login/Cadastrar</a>
+                </ul>
+
+                <div class="menu-icon">
+                    <i class="fa fa-bars" ></i>
+
+                </div>
+
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                </div>
+
+            </section>
+        </div>
+
+    </header>
+    
+        <section class="login">
+            <div class="container">
+                <div class="form">
+                    <h1>Editar Dados</h1>
+                    <form id="registration-form" action="/cadastrar_empresa" method="post">
+                        <h2>Dados da Empresa</h2>
+                        <input type="text" name="segmento-empresa" id="segmento-empresa" placeholder="Segmento da Emresa" required>
+                        <input type="text" name="razao-social" id="razao-social" placeholder="Razão Social" required>
+                        <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" required>
+                        <input type="text" name="ie" id="ie" placeholder="Inscrição Estadual" required>
+                        <input type="text" name="endereco" id="endereco" placeholder="Endereço" required>
+                        <input type="text" name="estado" id="estado" placeholder="Estado" required>
+                        <input type="text" name="cidade" id="cidade" placeholder="Cidade" required>
+                        <input type="tel" name="telefone1" id="telefone1" placeholder="Telefone 1" required>
+                        <input type="tel" name="telefone2" id="telefone2" placeholder="Telefone 2">
+                        <input type="email" name="email" id="email" placeholder="E-mail" required>
+                        <input type="text" name="objetivo" id="objetivo" placeholder="Objetivo" required>
+                        <div class="a-btn"><button type="submit" class="btn">Atualizar</button></div>
+                        <div class="a-btn"><button type="submit" class="btn">Excluir</button></div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+   
+
+<footer class="footer">
+    <div class="container">
+        <div class="links">
+                                                   <!--link pras redes sociais trocar-->
+            <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
+            <p>BY ESASYJOBS INC.</p>
+
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>
