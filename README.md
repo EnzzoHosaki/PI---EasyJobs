@@ -1,44 +1,83 @@
-# PI---EasyJobs
+# EasyJobs
 
-## Aplicação de Cadastro e Busca de Usuários
-### Descrição
-Este repositório contém uma aplicação web simples desenvolvida em Python utilizando o framework Flask. A aplicação é projetada para o cadastro de usuários do tipo "empresa" e "candidato", permitindo a busca de candidatos por critérios específicos.
+O EasyJobs é um sistema web simplificado para gerenciamento de empregos. Ele permite que os usuários se cadastrem como candidatos em busca de oportunidades ou como empresas em busca de talentos. Este projeto é construído em Python usando o framework Flask para o backend e Pandas para armazenamento e manipulação de dados.
 
-### Estrutura de Arquivos
-1. **app.py:** Este arquivo contém a configuração do servidor Flask e as rotas principais da aplicação.
+## Recursos
 
-2. **logica.py:** Aqui, estão implementadas as funções lógicas da aplicação, incluindo o cadastro de usuários, a definição de tipos, a coleta de informações de empresas e candidatos, a verificação de login, a edição de informações de usuários e a busca de candidatos.
+### Usuários
 
-3. **funcoes.py:** Esse arquivo oferece funções adicionais para buscar candidatos por critérios específicos, gerar novos IDs, cadastrar usuários, definir tipos de usuários, coletar informações de empresas e candidatos, verificar login, editar informações de usuários e empresas, buscar candidatos e gerar relatórios em PDF.
+- **Registro e Autenticação:**
+  - Os usuários podem se cadastrar fornecendo nome, e-mail e senha.
+  - As senhas são armazenadas de forma segura.
+  - A autenticação do usuário é baseada em e-mail e senha.
 
-4. **templates:** Esta pasta contém os arquivos HTML utilizados para renderizar as páginas da aplicação.
+- **Tipos de Usuários:**
+  - Os usuários podem ser "Candidato" ou "Empresa".
+  - Candidatos podem fornecer informações detalhadas sobre sua educação e experiência.
+  - Empresas podem detalhar informações sobre a empresa e suas vagas.
+
+- **Atualização e Exclusão de Conta:**
+  - Os usuários têm a opção de atualizar suas informações ou excluir suas contas.
+
+### Empresas
+
+- **Registro e Edição:**
+  - Empresas podem se cadastrar fornecendo informações como setor, CNPJ, endereço e objetivos.
+  - Detalhes da empresa, como setor e objetivo, podem ser editados posteriormente.
+
+- **Busca por Candidatos:**
+  - Empresas podem buscar candidatos com base em critérios específicos.
+  - Os resultados podem ser visualizados em uma lista formatada.
+
+### Candidatos
+
+- **Registro e Edição:**
+  - Candidatos podem fornecer informações detalhadas sobre sua educação, experiência e habilidades.
+  - Detalhes do candidato, como área de especialização e qualificações, podem ser editados posteriormente.
+
+- **Busca por Vagas:**
+  - Candidatos podem buscar oportunidades de emprego com base em critérios específicos.
+  - Os resultados podem ser visualizados em uma lista formatada.
+
+### PDFs Personalizados
+
+- **Geração de Relatórios:**
+  - Geração de PDF individual com informações detalhadas para candidatos e empresas.
+  - Os PDFs incluem dados relevantes, como formação acadêmica, experiência e detalhes da empresa.
 
 ## Como Executar
-1. Certifique-se de ter o Python instalado em seu sistema.
 
-2. Instale as dependências necessárias usando o seguinte comando:
+1. **Instalar Dependências:**
+   - Certifique-se de ter o Python e o pip instalados.
+   - Execute `pip install flask pandas reportlab` para instalar as dependências.
 
-`pip install flask pandas reportlab`
+2. **Executar a Aplicação:**
+   - Navegue até o diretório do projeto e execute `python main.py`.
+   - A aplicação estará acessível em [http://localhost:5000](http://localhost:5000).
 
-3. Execute a aplicação com o seguinte comando:
+3. **Interagir com o Sistema:**
+   - Abra um navegador e vá para [http://localhost:5000](http://localhost:5000).
+   - Explore recursos de registro, autenticação, busca e geração de PDF.
 
-`python app.py`
+4. **Encerrar a Aplicação:**
+   - Para encerrar a aplicação, pressione `Ctrl + C` no terminal onde a aplicação está sendo executada.
 
-4. Abra seu navegador e acesse http://localhost:5000/ para visualizar a aplicação.
+## Estrutura do Projeto
 
-## Funcionalidades Principais
+- **`main.py`:**
+  - Contém o código principal do backend usando Flask.
+  - Gerencia rotas, processa formulários e interage com a lógica principal.
 
-- **Cadastro de Usuários:** A aplicação permite o cadastro de usuários do tipo "empresa" e "candidato". Os dados são armazenados em arquivos Excel (usuarios.xlsx, empresas.xlsx, candidatos.xlsx) na primeira execução.
+- **`logica.py`:**
+  - Contém a lógica principal do sistema, incluindo operações CRUD e autenticação.
 
-- **Login e Redirecionamento:** O sistema verifica o login e redireciona os usuários para a página apropriada com base em seu tipo.
+- **`templates/`:**
+  - Contém arquivos HTML para renderização de páginas.
 
-- **Edição de Informações:** Usuários podem editar suas informações, incluindo empresas cadastrando detalhes sobre seus objetivos e candidatos fornecendo detalhes sobre suas experiências e projetos.
+- **Arquivos de Dados:**
+  - `usuarios.xlsx`, `candidatos.xlsx`, `empresas.xlsx`: Armazenam dados de usuários, candidatos e empresas.
+  - `vinculacoes.xlsx`: Armazena relacionamentos entre empresas e candidatos.
 
-- **Busca de Candidatos por Critérios:** O sistema permite a busca de candidatos com base em critérios específicos, utilizando a função buscar_candidatos_por_criterios.
+- **`/img`:**
+  - Diretório contendo imagens estáticas usadas no sistema.
 
-## Observações
-- Este é um projeto simples e pode ser estendido para incluir mais funcionalidades, melhorar a interface do usuário e implementar recursos adicionais.
-
-- Certifique-se de adequar a segurança da aplicação para um ambiente de produção antes de implantá-la.
-
-Sinta-se à vontade para explorar, modificar e expandir este projeto conforme necessário. Se precisar de ajuda ou tiver dúvidas, entre em contato!
